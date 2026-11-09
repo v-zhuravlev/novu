@@ -102,6 +102,7 @@ export const envValidators = {
         REDIS_HOST: str({ default: undefined }),
         REDIS_PORT: str({ default: undefined }),
       }),
+  REDIS_USERNAME: str({ default: undefined }),
   REDIS_PASSWORD: str({ default: undefined }),
   REDIS_TLS: json({ default: undefined }),
   ...(isBullMqEnabled() ? { REDIS_DB_INDEX: num() } : { REDIS_DB_INDEX: num({ default: undefined }) }),
